@@ -1,5 +1,6 @@
 package com.example.mahak.criminalintent;
 
+import java.util.Date;
 import java.util.UUID;
 
 /**
@@ -8,9 +9,29 @@ import java.util.UUID;
 public class Crime {
     private UUID crimeId;
     private String crimeTitle;
+    private Date date;
+    private boolean status;
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public boolean isStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
 
     public Crime(){
         crimeId = UUID.randomUUID();
+        date = new Date();
+
     }
 
     public UUID getCrimeId() {
